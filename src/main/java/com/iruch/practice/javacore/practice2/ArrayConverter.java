@@ -8,13 +8,7 @@ public abstract class ArrayConverter {
 
     public static <T> Map<T, Integer> convert(ArrayList<T> source) {
         Map<T, Integer> result = new HashMap<>();
-        source.forEach(item -> {
-            if (!result.containsKey(item)) {
-                result.put(item, 1);
-            } else {
-                result.replace(item, result.get(item) + 1);
-            }
-        });
+        source.forEach(item -> result.merge(item, 1, Integer::sum));
         return result;
     }
 

@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 class ArrayConverterTest {
 
     @Test
-    void ArrayCovert() {
+    void arrayCovertTest() {
         ArrayList<String> list = new ArrayList<>();
         String pattern = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         int subLength = 10;
